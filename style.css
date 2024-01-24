@@ -50,7 +50,7 @@ ul > li {
     color: #afafafee;
 }
 
-li > button {
+li > #checkbox{
     padding: 8px;
     margin: 0px 10px;
     border-radius: 2px;
@@ -61,14 +61,12 @@ li > button {
     grid-area: 1/1/2/2;
 }
 
-.checked {
-    background-color: #7dddf5;
-}
-
 .delete {
-    padding: 3px 7px;
+    padding: 0px;
     margin: 0px;
     background-color: transparent;
+    cursor: pointer;
+    border: none;
     color: #7dddf5;
     grid-area: 1/3/1/4;
 }

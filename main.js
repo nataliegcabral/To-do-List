@@ -15,7 +15,9 @@ task.addEventListener('keypress', function(event) {
             taskLi.innerHTML += task.value
             list.appendChild(taskLi)
 
-            let checkbox = document.createElement('button')
+            let checkbox = document.createElement('input')
+            checkbox.setAttribute('type', 'checkbox')
+            checkbox.id = 'checkbox'
             checkbox.innerHTML = ''
             taskLi.appendChild(checkbox)
 
@@ -27,12 +29,12 @@ task.addEventListener('keypress', function(event) {
             taskLi.appendChild(deleteButton)
             
             checkbox.addEventListener('click', () => {
-                if(taskLi.classList.contains('done') || checkbox.classList.contains('checked')) {
+                if(taskLi.classList.contains('done') || checkbox.classList.contains('btn-check-input')) {
                     taskLi.classList.remove('done');
-                    checkbox.classList.remove('checked')
+                    checkbox.classList.remove('btn-check-input')
                 } else {
                     taskLi.classList.add('done');
-                    checkbox.classList.add('checked');
+                    checkbox.classList.add('btn-check-input');
                 }            
             });
 
